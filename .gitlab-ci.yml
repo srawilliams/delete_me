@@ -4,8 +4,9 @@ stages:
 build:
   stage: build
   image:
+    name: yagni/elixir_cross_compile_windows_release
     # name: yagni/elixir_cross_compile_windows_release_gitlab:latest
-    name: ubuntu:bionic
+    # name: ubuntu:bionic
     entrypoint: ["/bin/sh","-c"]
   tags:
     - host.k8
