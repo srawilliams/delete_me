@@ -1,0 +1,14 @@
+stages:
+  - build
+
+build:
+  stage: build
+  image:
+    # name: yagni/elixir_cross_compile_windows_release_gitlab:latest
+    name: ubuntu:bionic
+    entrypoint: ["/bin/sh","-c"]
+  tags:
+    - host.k8
+  script:
+    - ls
+    # - /usr/local/bin/build_zip_packaged_release.sh
